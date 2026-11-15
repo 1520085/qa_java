@@ -22,4 +22,12 @@ public void getFamilyReturnFamily()
         String actualFamily = feline.getFamily();
         Assert.assertEquals(expectedFamily,actualFamily);
     }
+    @Test
+public void getKittenReturnOneKitten()
+    {
+        Feline feline = new Feline();
+        int expectedCount = 1;
+        int actualCount = feline.getKittens();
+        Assert.assertEquals(expectedCount,actualCount);
+    }
 }
