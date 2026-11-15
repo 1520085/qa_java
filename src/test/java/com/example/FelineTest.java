@@ -23,11 +23,19 @@ public void getFamilyReturnFamily()
         Assert.assertEquals(expectedFamily,actualFamily);
     }
     @Test
-public void getKittenReturnOneKitten()
+public void getKittensReturnOneKitten()
     {
         Feline feline = new Feline();
         int expectedCount = 1;
         int actualCount = feline.getKittens();
+        Assert.assertEquals(expectedCount,actualCount);
+    }
+    @Test
+public void getKittensReturnKittenCount()
+    {
+        Feline feline = new Feline();
+        int expectedCount = 21;
+        int actualCount = feline.getKittens(expectedCount);
         Assert.assertEquals(expectedCount,actualCount);
     }
 }
