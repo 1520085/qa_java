@@ -13,4 +13,13 @@ public void eatMeatReturnFoodPredator()  throws Exception
         List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
         Assert.assertEquals(expectedFood, actualFood);
     }
+
+    @Test
+public void getFamilyReturnFamily()
+    {
+        Feline feline = new Feline();
+        String expectedFamily = "Кошачьи";
+        String actualFamily = feline.getFamily();
+        Assert.assertEquals(expectedFamily,actualFamily);
+    }
 }
