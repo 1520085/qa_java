@@ -14,11 +14,10 @@ public class LionTest {
     @Test
     public void getKittensReturnOneFromFeline() throws Exception
     {
-        Lion lion = new Lion("Самец");
+        Lion lion = new Lion("Самец", feline);
         Mockito.when(feline.getKittens()).thenReturn(1);
-        int actualKittens = feline.getKittens();
+        int actualKittens = lion.getKittens();
         int expectedKittens = 1;
         Assert.assertEquals(expectedKittens,actualKittens);
     }
-
 }
