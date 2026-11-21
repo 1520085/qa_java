@@ -20,4 +20,13 @@ public class LionTest {
         int expectedKittens = 1;
         Assert.assertEquals(expectedKittens,actualKittens);
     }
+    @Test
+    public void getFoodReturnPredatorFood() throws Exception
+    {
+        Lion lion = new Lion("Самец", feline);
+        List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
+        Mockito.when(feline.getFood("Хищник")).thenReturn(expectedFood);
+        List<String> actualFood = lion.getFood();
+        Assert.assertEquals(actualFood,expectedFood);
+    }
 }
