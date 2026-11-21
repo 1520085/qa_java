@@ -29,4 +29,9 @@ public class LionTest {
         List<String> actualFood = lion.getFood();
         Assert.assertEquals(actualFood,expectedFood);
     }
+    @Test(expected = Exception.class)
+    public void getInvalidExceptionReturnError() throws Exception {
+        new Lion("Некорректный пол", feline);
+    }
+
 }
